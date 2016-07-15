@@ -4,7 +4,7 @@ if (navigator.geolocation) {
     $.getJSON("http://api.openweathermap.org/data/2.5/weather?lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + "&units=imperial&APPID=42a747e29b71f50616529415fc4e1359", function(json) {
       console.log(json);
       //temperature in fahrenheit
-      $("#temp").html(Math.ceil(json.main.temp) + '˚' + ' <img src="https://github.com/archelon14/Fluffy-Sheep/blob/master/Images/' + json.weather[0].icon + '.png"' + ' />');
+      $("#temp").html(Math.ceil(json.main.temp) + '˚' + ' <img src="PNG/' + json.weather[0].icon + '.png"' + ' />');
       $("#city").html(json.name + ', ' + json.sys.country + ' is experiencing ' + json.weather[0].main);
     });
   });

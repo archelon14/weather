@@ -2,6 +2,10 @@ body {
   margin: 25px;
 }
 
+.curTemp {
+  font-size: 28px;
+}
+
 .space {
   margin: 50px 0px;
 }

@@ -16,7 +16,7 @@ h1 {
   box-shadow: 5px 5px 25px #ccc;
   color: #113962;
   width: 375px;
-  height: 435px;
+  height: 440px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -25,7 +25,7 @@ h1 {
 .cardBorder {
   border: 2px solid #8cb5c8;
   border-radius: 5px;
-  height: 415px;
+  height: 430px;
   margin: 5px;
 }
 

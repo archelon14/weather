@@ -31,16 +31,10 @@ $(function() {
 
 //Style changes when changing format of temperature
 $("#cel").click(function(){
-    $("#fah").removeClass('btn-info');
-    $("#fah").addClass('btn-default');
     $("#fah").removeClass('active');
-    $("#cel").addClass('btn-info');
     $("#cel").addClass('active');
 });
 $("#fah").click(function(){
-    $("#cel").removeClass('btn-info');
-    $("#cel").addClass('btn-default');
     $("#cel").removeClass('active');
-    $("#fah").addClass('btn-info');
     $("#fah").addClass('active');
 });

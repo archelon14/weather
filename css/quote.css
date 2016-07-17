@@ -2,14 +2,19 @@ body {
   margin: 25px;
 }
 
+h1 {
+  color: #577d9b;
+}
+
 .curTemp {
   font-size: 28px;
 }
 
 .card {
-  /*background-color: #D2B48C;*/
-  background: #D2B48C url("PNG/textures.jpg");
+  background: linear-gradient(-45deg, #7da6cc 0%, #c9eef3 100%);
   border-radius: 5px;
+  box-shadow: 5px 5px 25px #ccc;
+  color: #113962;
   width: 400px;
   height: 425px;
   position: absolute;
@@ -18,7 +23,7 @@ body {
 }
 
 .cardBorder {
-  border: 2px solid #d6c8b4;
+  border: 2px solid #8cb5c8;
   border-radius: 5px;
   height: 415px;
   margin: 5px;

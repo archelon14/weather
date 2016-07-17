@@ -6,6 +6,24 @@ body {
   font-size: 28px;
 }
 
+.card {
+  /*background-color: #D2B48C;*/
+  background: #D2B48C url("PNG/textures.jpg");
+  border-radius: 5px;
+  width: 400px;
+  height: 425px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cardBorder {
+  border: 2px solid #d6c8b4;
+  border-radius: 5px;
+  height: 415px;
+  margin: 5px;
+}
+
 .space {
   margin: 50px 0px;
 }

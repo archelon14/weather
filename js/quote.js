@@ -1,11 +1,22 @@
 //Grab geo location and assemble json
-if (navigator.geolocation) {
-  navigator.geolocation.getCurrentPosition(function(position) {
-    $.getJSON("http://api.openweathermap.org/data/2.5/weather?lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + "&units=imperial&APPID=42a747e29b71f50616529415fc4e1359", function(json) {
-      console.log(json);
+var lat;
+var long;
+var city;
+var state;
+$(function() {
+  //Get location info from IP
+  $.getJSON("http://ip-api.com/json", function(jsonIP) {
+    lat = jsonIP.lat;
+    long = jsonIP.lon;
+    city = jsonIP.city;
+    state = jsonIP.region;
+
+    //Use location to get weather and stuff
+    //$.getJSON("http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + long + "&units=imperial&APPID=42a747e29b71f50616529415fc4e1359", function(json) {});
+    $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&APPID=42a747e29b71f50616529415fc4e1359", function(json) {
       //Display the weather
       $("#temp").html(Math.ceil(json.main.temp) + '˚' + ' <br/><br/><img width="128" src="PNG/' + json.weather[0].icon + '.png"' + ' />');
-      $("#city").html(json.name + ', ' + json.sys.country + ' is experiencing ' + json.weather[0].main);
+      $("#city").html(city + ', ' + state + ' is experiencing ' + json.weather[0].main);
 
       //Changing the format to celsius and fahrenheit
       $("#cel").click(function() {
@@ -16,7 +27,7 @@ if (navigator.geolocation) {
       });
     });
   });
-}
+});
 
 //Style changes when changing format of temperature
 $("#cel").click(function(){
